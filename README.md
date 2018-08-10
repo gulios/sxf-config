@@ -13,7 +13,7 @@ The Config component based on Illuminate and DotEnv packages.
 
 ##### Example usage:
 
-1. Use [Composer](http://getcomposer.org) to install Whoops into your project:
+1. Use [Composer](http://getcomposer.org) to install SXF Config into your project:
 
     ```bash
     composer require gulios/sxf-config
