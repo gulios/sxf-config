@@ -7,7 +7,6 @@ use SXF\Config\Config;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\Filesystem\Filesystem;
 
 class ConfigCacheCommand extends Command
 {
@@ -61,10 +60,7 @@ class ConfigCacheCommand extends Command
         $config->setConfigFilesPath($this->configPath);
         $config->setEnvFile($this->envFile);
         $config->setCacheConfigFile($this->cacheFile);
-
-        $fileSystem = new Filesystem();
-        $fileSystem->remove($this->cacheFile);
-        $fileSystem->dumpFile($this->cacheFile, '<?php return ' . var_export($config->getAll(), true) . ';' . PHP_EOL);
+        $config->createCache();
 
         $output->writeln('<info>Configuration cached successfully! ' . $this->cacheFile . '</info>');
         return true;

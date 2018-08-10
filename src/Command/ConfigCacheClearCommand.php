@@ -7,7 +7,6 @@ use SXF\Config\Config;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\Filesystem\Filesystem;
 
 class ConfigCacheClearCommand extends Command
 {
@@ -61,9 +60,7 @@ class ConfigCacheClearCommand extends Command
         $config->setConfigFilesPath($this->configPath);
         $config->setEnvFile($this->envFile);
         $config->setCacheConfigFile($this->cacheFile);
-
-        $fileSystem = new Filesystem();
-        $fileSystem->remove($this->cacheFile);
+        $config->clearCache();
 
         $output->writeln('<info>Configuration cache cleared! ' . $this->cacheFile . '</info>');
         return true;

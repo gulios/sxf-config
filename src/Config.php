@@ -187,6 +187,16 @@ class Config extends Repository
     public function createCache() : void
     {
         $fileSystem = new Filesystem();
+        $fileSystem->remove($this->cacheFile);
         $fileSystem->dumpFile($this->cacheFile, '<?php return ' . var_export($this->getAll(), true) . ';' . PHP_EOL);
+    }
+
+    /**
+     *
+     */
+    public function clearCache() : void
+    {
+        $fileSystem = new Filesystem();
+        $fileSystem->remove($this->cacheFile);
     }
 }
