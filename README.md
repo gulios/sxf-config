@@ -1,6 +1,6 @@
 # SXF - Config Component
 
-The Config component based on Illuminate and DotEnv packages.
+The Config component based on Illuminate and DotEnv packages. (Laravel idea)
 
 
 ## Features
@@ -8,7 +8,7 @@ The Config component based on Illuminate and DotEnv packages.
 - store authorization values in .env
 - use cached configuration
 - default values for ENV
-- configuration structure based on filesystem (nested files) 
+- nested configuration structure 
 
 
 ##### Example usage:
