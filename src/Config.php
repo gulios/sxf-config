@@ -5,12 +5,12 @@ namespace SXF\Config;
 
 use Illuminate\Config\Repository;
 use Symfony\Component\Finder\Finder;
-use Dotenv\Loader;
 use Symfony\Component\Filesystem\Filesystem;
+use Dotenv\Loader;
 
 /**
- * Class ApplicationConfig
- * @package SXF\Configs
+ * Class Config
+ * @package SXF\Config
  */
 class Config extends Repository
 {

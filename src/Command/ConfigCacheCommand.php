@@ -8,6 +8,10 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
+/**
+ * Class ConfigCacheCommand
+ * @package SXF\Config\Command
+ */
 class ConfigCacheCommand extends Command
 {
     /**
