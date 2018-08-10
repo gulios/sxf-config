@@ -2,6 +2,7 @@
   "name": "gulios/sxf-config",
   "type": "library",
   "description": "SXF Config Component",
+  "minimum-stability": "stable",
   "keywords": [],
   "homepage": "https://www.gulios.com",
   "license": "MIT",
@@ -22,14 +23,13 @@
     "symfony/console": "4.0.*"
   },
   "require-dev": {
-    "symfony/dependency-injection": "~3.4|~4.0",
-    "symfony/event-dispatcher": "~3.4|~4.0",
-    "symfony/finder": "~3.4|~4.0",
-    "symfony/yaml": "~3.4|~4.0"
+    "fzaninotto/faker": "1.7.*",
+    "phpunit/phpunit": "7.0.*",
+    "filp/whoops": "2.1.*"
   },
   "autoload": {
     "psr-4": {
-      "SXF\\": "src/"
+      "SXF\\Config\\": "src/"
     }
   }
 }
