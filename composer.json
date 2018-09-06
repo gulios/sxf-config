@@ -2,7 +2,7 @@
   "name": "gulios/sxf-config",
   "type": "library",
   "description": "SXF Config Component",
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "keywords": [],
   "homepage": "https://www.gulios.com",
   "license": "MIT",
